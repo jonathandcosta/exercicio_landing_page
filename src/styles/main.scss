@@ -3,9 +3,11 @@
   box-sizing: border-box;
   padding: 0;
 }
-
-body {
-  background-color: #000;
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -14,54 +16,25 @@ body {
   left: 0;
   transition: background-color 0.5s ease;
   z-index: 1;
+  background-color: #c2c2c2;
 
-  &--is-hidden {
-    background-color: transparent;
-    transition: background-color 0.5s ease;
-
-    .header {
-      &__logo,
-      &__links__item:first-child {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease;
-      }
-    }
+  a {
+    text-transform: uppercase;
+    color: #000;
   }
 
   &__container {
     padding: 8px 36px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__logo {
-    max-width: 80px;
-    width: 100%;
-    margin: 5px;
-    transition: opacity 0.5s ease;
-  }
-
-  &__links {
-    display: flex;
-
-    &__item {
-      margin: 5px;
-      transition: opacity 0.5s ease;
-    }
-  }
-  .button {
-    height: 50px;
   }
 }
 
 .hero {
-  padding: 2.6vw;
+  display: flex;
+  justify-content: flex-start;
   min-height: 100vh;
   background-image: url(../images/hero.jpg);
   text-align: center;
   background-size: cover;
-  opacity: 0.1;
 
   .button {
     margin-top: 2vw;
@@ -69,14 +42,57 @@ body {
   }
 
   &__content {
-    max-width: 640px;
+    margin-top: 215px;
+    background-color: #000;
+    opacity: 0.9;
+    width: 720px;
+
+    span {
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 32px;
+    }
 
     &__branding {
-      max-width: 320px;
-      margin: 0 auto 38px;
+      display: inline-block;
+      width: 530px;
+      span {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      h6 {
+        margin-top: 32px;
+        font-weight: 100;
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+    &__envio {
+      display: block;
+      align-items: left;
+
+      input {
+        margin-top: 30px;
+        width: 400px;
+        height: 50px;
+        border-radius: 14px;
+      }
+      button {
+        padding: 10px 10px;
+        margin-top: 12px;
+        width: 200px;
+        height: 50px;
+        border-radius: 14px;
+        margin-left: 5px;
+      }
     }
     .title--small {
+      margin-top: 30px;
       margin-bottom: 64px;
+      color: #fff;
+      font-weight: 400;
     }
     p {
       margin-bottom: 20px;
